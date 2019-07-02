@@ -44,3 +44,24 @@ function showProducts() {
         start();
     });
 }
+
+
+// prompt user functions
+
+function start() {
+    connection.query("SELECT * FROM products", function(err, res) {
+        if (err) throw console.log("connection error:" + err);
+    inquirer
+        .prompt([
+                {
+               name: 'selectId',
+                    type: 'input',
+                    message: 'Enter ITEM ID for product you wish to purchase:',
+                    validate: function (value) {
+                        if (isNaN(value) === false) {
+                            return true;
+                        }
+                        return false;
+                    }
+
+        },
