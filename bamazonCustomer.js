@@ -110,3 +110,17 @@ function start() {
                     }
 
                 ],
+
+                function (error) {
+                    //                            console.log(price, amountBought);
+                                                if (error) throw err;
+                                                console.log("__________________________--------------------_______________");
+                                                console.log("\n\r");
+                                                console.log("Order details:");
+                                                console.log("Item(s) purchased: " + itemPurchased);
+                                                console.log("Quanity purchased: " + itemBought + " @ $" + res[0].price);
+                                                console.log("Total Cost: $" + totalPrice);
+                                                console.log("\n\r");
+                                                console.log("Thank you for shopping at S-Mart, remember shop smart, shop S-Mart-");
+                                                console.log("________-----------_____________--------------");
+                                                showProducts();
