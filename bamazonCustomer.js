@@ -65,3 +65,16 @@ function start() {
                     }
 
         },
+
+        {
+            name: 'amountBought',
+            type: 'input',
+            message: 'How many would you like?',
+            validate: function (value) {
+                if (isNaN(value) === false) {
+                    return true;
+                }
+                return false;
+            }
+           
+        }
