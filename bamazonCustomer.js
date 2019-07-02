@@ -78,3 +78,18 @@ function start() {
             }
            
         }
+
+    ]).then (function (answers) {
+        var query = "SELECT * FROM products WHERE ?";
+        connection.query(query, {
+            id: answers.selectId
+        }, function (err, res) {
+
+
+            // get the information of the chosen item, set input to variables, pass variables as Parameters
+
+            var inStock = res[0].quanity;
+            var itemBought = answers.amountBought;
+
+            if (inStock >= itemBought) {
+                var leftInStock = inStock - itemBought;
