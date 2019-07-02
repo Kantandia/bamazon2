@@ -13,3 +13,13 @@ var connection = mysql.createConnection({
     password: "kaykay@49thieves",
     database: "bamazon_db"
 });
+
+
+
+
+connection.connect(function (err) {
+    if (err) throw err;
+
+    // start function 
+    showProducts();
+});
