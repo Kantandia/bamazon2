@@ -93,3 +93,20 @@ function start() {
 
             if (inStock >= itemBought) {
                 var leftInStock = inStock - itemBought;
+
+                var totalPrice = res[0].price * itemBought;
+                var itemPurchased = res[0].product;
+                
+                console.log(totalPrice + "  total price of items bought");
+                
+                connection.query(
+                    "UPDATE products SET ? WHERE ?", [
+                        {
+                            quanity: leftInStock
+                            
+                    },
+                        {
+                            id: answers.selectId
+                    }
+
+                ],
