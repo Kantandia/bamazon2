@@ -1,0 +1,20 @@
+{
+  "name": "bamazon2",
+  "version": "1.0.0",
+  "description": "this is the girl",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kantandia/bamazon2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kantandia/bamazon2/issues"
+  },
+  "homepage": "https://github.com/Kantandia/bamazon2#readme"
+}
